@@ -18,7 +18,7 @@ module.exports = {
             },
             {
                 test: /\.scss|\.sass/,
-                loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["android 4", "iOS 6", "chrome"]}!sass-loader?indentedSyntax'
+                loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["android 4", "iOS 6"]}!sass-loader?indentedSyntax'
             }
         ]
     },
