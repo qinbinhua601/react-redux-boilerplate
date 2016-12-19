@@ -6,6 +6,8 @@ import {selectUser} from '../actions/index'
 
 class UserList extends Component {
 
+    handleEvent() {}
+
     renderList() {
         return this.props.users.map((user) => {
             return (

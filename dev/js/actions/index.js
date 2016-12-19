@@ -5,3 +5,10 @@ export const selectUser = (user) => {
         payload: user
     }
 };
+
+export const selectChessItem = (chessItem) => {
+    return {
+        type: 'SELECT_CHESS_ITEM',
+        payload: chessItem
+    }
+}

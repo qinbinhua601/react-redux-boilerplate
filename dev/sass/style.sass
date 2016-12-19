@@ -1,7 +1,75 @@
+html, body
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
 $primary: #006699
-body
-    display: flex
-    justify-content: center
-    align-items: center
+
 h2
     color: $primary
+#chess-board-wrapper
+    height: 300px
+    @extend %border
+    overflow: hidden
+    #chess-board
+        width: 300px
+        list-style: none
+        overflow: hidden
+        li
+            height: 100px
+            width: 100px
+            float: left
+            @extend %outline
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%border
+    border: 0.07rem solid red
+%outline
+    outline: 0.07rem solid red

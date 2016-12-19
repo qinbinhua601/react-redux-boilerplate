@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux';
 import UserReducer from './reducer-users';
 import ActiveUserReducer from './reducer-active-user';
-
+import ChessData from './chess-data';
+import SelectChessItem from './select-chess-item';
 /*
  * We combine all reducers into a single object before updated data is dispatched (sent) to store
  * Your entire applications state (store) is just whatever gets returned from all your reducers
@@ -9,7 +10,8 @@ import ActiveUserReducer from './reducer-active-user';
 
 const allReducers = combineReducers({
     users: UserReducer,
-    activeUser: ActiveUserReducer
+    activeUser: ActiveUserReducer,
+    chessData: ChessData
 });
 
 export default allReducers
