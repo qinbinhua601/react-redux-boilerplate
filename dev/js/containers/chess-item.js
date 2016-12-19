@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {selectChessItem} from '../actions/index'
+import {selectChessItem, addMove, removeMove, deselectChessItem} from '../actions/index'
 
 class ChessItem extends Component {
     constructor(props) {
@@ -11,19 +11,31 @@ class ChessItem extends Component {
 
     handleClickItem(e) {
         e.preventDefault()
-        this.props.selectChessItem(this.props.chessItem)
+        if(this.props.chessItem.label !== ' ') {
+            this.props.removeMove()
+            this.props.deselectChessItem(this.props.index)
+        } else {
+            this.props.addMove(this.props.chessItem)
+            this.props.selectChessItem(this.props.index, this.props.totalMove + 1)
+        }
     }
 
     render() {
         return (
-            <li onClick={(e) => this.handleClickItem(e)}></li>
+            <li onClick={(e) => this.handleClickItem(e)}>{this.props.chessItem.label}</li>
         );
     }
 }
 
-function matchDispatchToProps(dispatch){
-    console.log(dispatch)
-    return bindActionCreators({selectChessItem: selectChessItem}, dispatch);
+function mapStateToProps(state) {
+    return {
+        chessData: state.chessData,
+        totalMove: state.totalMove
+    };
 }
 
-export default connect(matchDispatchToProps)(ChessItem);
+function matchDispatchToProps(dispatch){
+    return bindActionCreators({selectChessItem, addMove, removeMove, deselectChessItem}, dispatch);
+}
+
+export default connect(mapStateToProps,matchDispatchToProps)(ChessItem);

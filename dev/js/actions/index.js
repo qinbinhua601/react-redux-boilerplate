@@ -6,9 +6,37 @@ export const selectUser = (user) => {
     }
 };
 
-export const selectChessItem = (chessItem) => {
+export const selectChessItem = (index, totalMove) => {
     return {
         type: 'SELECT_CHESS_ITEM',
-        payload: chessItem
+        payload: {
+            index,
+            totalMove,
+        }
+    }
+}
+
+
+export const deselectChessItem = (index, totalMove) => {
+    return {
+        type: 'DESELECT_CHESS_ITEM',
+        payload: {
+            index,
+            totalMove,
+        }
+    }
+}
+
+export const addMove = (chessItem) => {
+    return {
+        type: 'ADD_MOVE',
+        payload: {}
+    }
+}
+
+export const removeMove = () => {
+    return {
+        type: 'REMOVE_MOVE',
+        payload: {}
     }
 }

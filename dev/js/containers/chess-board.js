@@ -8,7 +8,7 @@ class ChessBoard extends Component {
             <div id="chess-board-wrapper">
                 <ul id="chess-board">
                     {this.props.chessData.map((ele, i) => {
-                        return <ChessItem key={i} chessItem={ele}></ChessItem>
+                        return <ChessItem key={i} index={i} chessItem={ele}></ChessItem>
                     })}
                 </ul>
             </div>
