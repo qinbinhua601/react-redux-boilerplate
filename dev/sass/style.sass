@@ -1,75 +1,32 @@
 html, body
-    box-sizing: border-box
-    margin: 0
-    padding: 0
+  box-sizing: border-box
+  margin: 0
+  padding: 0
 
 $primary: #006699
 
 h2
-    color: $primary
+  color: $primary
+
 #chess-board-wrapper
-    height: 400px
-    overflow: hidden
-    #chess-board
-        width: 300px
-        list-style: none
-        li
-            height: 100px
-            line-height: 100px
-            width: 100px
-            float: left
-            text-align: center
-            @extend %outline
+  height: 400px
+  overflow: hidden
 
+  #chess-board
+    width: 300px
+    list-style: none
 
+    li
+      height: 100px
+      line-height: 100px
+      width: 100px
+      float: left
+      text-align: center
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      @extend %outline
 
 %border
-    border: 0.07rem solid red
+  border: 0.07rem solid red
+
 %outline
-    outline: 0.07rem solid red
+  outline: 0.07rem solid red

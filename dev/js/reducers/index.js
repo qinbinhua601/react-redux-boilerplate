@@ -1,4 +1,6 @@
-import {combineReducers} from 'redux';
+import {
+  combineReducers
+} from 'redux';
 import UserReducer from './reducer-users';
 import ActiveUserReducer from './reducer-active-user';
 import ChessData from './chess-data';
@@ -10,10 +12,10 @@ import TotalMove from './total-move';
  * */
 
 const allReducers = combineReducers({
-    users: UserReducer,
-    activeUser: ActiveUserReducer,
-    chessData: ChessData,
-    totalMove: TotalMove
+  users: UserReducer,
+  activeUser: ActiveUserReducer,
+  chessData: ChessData,
+  totalMove: TotalMove
 });
 
 export default allReducers

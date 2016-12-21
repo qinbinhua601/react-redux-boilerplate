@@ -11,13 +11,13 @@ import App from './components/App';
 
 const logger = createLogger();
 const store = createStore(
-    allReducers,
-    applyMiddleware(thunk, promise, logger)
+	allReducers,
+	applyMiddleware(thunk, promise, logger)
 );
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('app')
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.getElementById('app')
 );

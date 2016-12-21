@@ -5,15 +5,20 @@ import ChessBoard from '../containers/chess-board';
 
 require('../../sass/style.sass');
 
-const App = () => (
-    <div>
-        <h2>User List</h2>
-        <UserList />
-        <hr />
-        <h2>User Details</h2>
-        <UserDetails /> 
-        <ChessBoard />
-    </div>
+const App = () => ( <
+  div >
+  <
+  h2 > User List < /h2> <
+  UserList / >
+  <
+  hr / >
+  <
+  h2 > User Details < /h2> <
+  UserDetails / >
+  <
+  ChessBoard / >
+  <
+  /div>
 );
 
 export default App;
